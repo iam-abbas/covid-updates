@@ -239,8 +239,8 @@ def exists(phone):
 
 
 def getTwilioClient():
-    account_sid = 'AC71c18c3fb2750f45f156ba3a884204b0'
-    auth_token = 'dcf2070f53ebf5da9082aaa6941abad0'
+    account_sid = '##############'
+    auth_token = '##################'
     client = Client(account_sid, auth_token)
     return client
 
@@ -251,7 +251,7 @@ def sendSMS(msg, number):
         message = client.messages \
             .create(
                 body=str(msg),
-                messaging_service_sid='MG1e4b8901eff112fe61c2292994d6f5c9',
+                messaging_service_sid='#############',
                 to=str(number)
             )
         return 'sent'
